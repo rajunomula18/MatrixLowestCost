@@ -692,7 +692,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
 
-    public boolean nonNumeric(int[][] grid){
+    public boolean nonNumeric(String[][] grid) {
 
         for (int i = 0; i < grid.length; i++) {
             List<String> colList = new ArrayList<>();
@@ -702,8 +702,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             }
             for (String s : colList) {
 
-
-                if (s.matches(".*[a - zA-Z].*")){
+                if (s.matches(".*[a - zA-Z].*")) {
                     return true;
 
                 }

@@ -167,7 +167,6 @@ public class ExampleUnitTest {
         assertEquals(input.get(8).intValue(), 1);
         assertEquals(input.get(9).intValue(), 1);
 
-
         assertEquals(20, output);
         assertEquals("Yes", mMainActivity.getStatus());
 
@@ -204,14 +203,19 @@ public class ExampleUnitTest {
 
     @Test
     public void non_numeric() throws Exception {
-        int grid[][] = {};
+        String expected = null;
+
+        String grid[][] = {{"5", "4", "H"},
+                {"8", "M", "7"},
+                {"5", "7", "5"}};
 
 
-        // boolean output  = mMainActivity.nonNumeric(grid);
-        //if(output == true){
-        String expected = "Invalid matrix";
-        //    }
+        boolean output = mMainActivity.nonNumeric(grid);
         //example grid contains alphabets return true
+
+        if (output == true) {
+            expected = "Invalid matrix";
+        }
         assertEquals("Invalid matrix", expected);
 
     }
