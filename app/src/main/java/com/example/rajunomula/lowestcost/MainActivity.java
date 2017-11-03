@@ -24,7 +24,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private List<Integer> minCostPathIndex = new ArrayList<>();
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -600,7 +599,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         }
 
 
-        //Find the total cost
+        //Find the total  cost
         int costSum = 0;
         for (int i = 0; i < minCostPathIndex.size(); i++) {
             costSum += grid[i][minCostPathIndex.get(i) - 1];
@@ -709,7 +708,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 System.out.println();
             }
         }
-
         return false;
     }
 
